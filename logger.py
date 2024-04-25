@@ -17,7 +17,7 @@ def input_data():
         var = int(input('Введите число: '))
     if var == 1:
         with open('data_first_variant.csv', 'a', encoding='utf-8') as f:
-            f.write(f' {name} \n {surname} \n {phone} \n {address} \n\n')
+            f.write(f' \n\n {name} \n {surname} \n {phone} \n {address} \n\n')
     elif var == 2:
         with open('data_second_variant.csv', 'a', encoding='utf-8') as f:
             f.write(f' {name};{surname};{phone};{address} \n\n')
@@ -33,7 +33,7 @@ def print_data1():
             if data_first[i] == '\n' or i == len(data_first) - 1:
                 data_first_list.append(''.join(data_first[j:i + 1]))
                 j = i
-    return data_first_list
+    return data_first_list # включать для номеров 3/4, для номера 2 не работает((
     # print(' '.join(data_first_list))
 
 
